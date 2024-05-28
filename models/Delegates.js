@@ -45,6 +45,12 @@ const DelegateSchema = new mongoose.Schema({
         url: String,
         public_id: String,
     },
+    prevExp: {
+        type: String,
+    },
+    grade: {
+        type: Number
+    },
     isVerified: {
         type: Boolean,
     }

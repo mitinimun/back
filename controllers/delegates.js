@@ -28,6 +28,8 @@ export const registerDelegate = async (req, res) => {
     commpref3,
     isVeg,
     image,
+    prevExp,
+    grade
   } = req.body;
 
   if (password.length < 6) return res.status(400).send("Password should be longer than 6 characters!")
@@ -51,6 +53,8 @@ export const registerDelegate = async (req, res) => {
     commpref3,
     isVeg,
     image,
+    prevExp,
+    grade
   });
 
   try {
