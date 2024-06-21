@@ -6,6 +6,8 @@ import dotenv from "dotenv"
 import { errorHandler, routeNotFound } from "./middlewares/error.js";
 import cors from "cors";
 import ocRoutes from "./routes/ocRoutes.js";
+import committeeRoutes from "./routes/committeeRoutes.js";
+import postRoutes from "./routes/postRoutes.js";
 
 const app = express();
 app.use(cors());
@@ -21,6 +23,8 @@ const PORT = process.env.PORT;
 //routes
 app.use("/api/delegates", delegateRoutes);
 app.use("/api/oc", ocRoutes);
+app.use("/api/committees", committeeRoutes);
+app.use("/api/posts", postRoutes)
 
 app.use(errorHandler);
 app.use(routeNotFound);

@@ -34,8 +34,7 @@ const DelegateSchema = new mongoose.Schema({
         required: true,
     },
     committee: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Committee",
+        type: String,
     },
     isVeg: {
         type: String,
@@ -53,6 +52,10 @@ const DelegateSchema = new mongoose.Schema({
     },
     isVerified: {
         type: Boolean,
+    },
+    resetPasswordLink:{
+        data: String,
+        default: String,
     }
 });
 
